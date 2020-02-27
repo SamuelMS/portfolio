@@ -1,5 +1,8 @@
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.35rem;
+  background-color: #181e23;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -179,7 +182,10 @@ h1, h2, h3, h4, h5, h6, p {
 .portfolio-container {
   width: 100vw;
   height: 100vh;
-  background-color: #181e23;
+}
+
+.portfolio-text-shadow {
+  text-shadow: 1px 1px 5px black;
 }
 
 .intro-background {
@@ -195,7 +201,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
   left: 0;
   top: 0;
-  filter: blur(10px);
+  filter: blur(12px);
 }
 
 .intro-background::after {
@@ -216,7 +222,16 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 950px;
 }
 
+.next-slide-indicator-icon {
+  margin-top: -5px;
+}
+
+.next-slide-indicator-label {
+  letter-spacing: 2px;
+}
+
 /* Animations */
+
 .portfolio-appear,
 .header-secondary-enter,
 .header-content-enter {
@@ -224,7 +239,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .portfolio-appear-active {
   opacity: 1;
-  transition: opacity 2s 0.5s;
+  transition: opacity 1s 0.5s;
 }
 
 .header-main-enter {
@@ -234,7 +249,7 @@ h1, h2, h3, h4, h5, h6, p {
 .header-main-enter-active,
 .header-main-enter-done {
   position: relative;
-  bottom: 3rem;
+  bottom: 2.5rem;
   transition: bottom 0.5s 0.2s ease-in-out;
 }
 
@@ -249,7 +264,19 @@ h1, h2, h3, h4, h5, h6, p {
   transition: opacity 1s 0.8s;
 }
 
+.next-slide-indicator-enter {
+  opacity: 0;
+  margin-bottom: 0;
+}
+.next-slide-indicator-enter-active,
+.next-slide-indicator-enter-done {
+  opacity: 1;
+  margin-bottom: 30px;
+  transition: opacity 0.5s 2s, margin-bottom 0.75s 2s ease-out;
+}
+
 /* Overrides */
+
 .carousel,
 .slider-wrapper,
 .slide {
