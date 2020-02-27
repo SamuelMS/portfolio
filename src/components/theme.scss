@@ -1,0 +1,36 @@
+$color-primary: #6247AA;
+$color-secondary: #A06CD5;
+$color-accent: #d2ba96;
+$color-light: #FBFBFB;
+
+.bg-color-primary {
+  background-color: $color-primary;
+}
+
+.text-color-primary {
+  color: $color-primary;
+}
+
+.bg-color-secondary {
+  background-color: $color-secondary;
+}
+
+.text-color-secondary {
+  color: $color-secondary;
+}
+
+.bg-color-accent {
+  background-color: $color-accent;
+}
+
+.text-color-accent {
+  color: $color-accent;
+}
+
+.bg-color-light {
+  background-color: $color-light;
+}
+
+.text-color-light {
+  color: $color-light;
+}
