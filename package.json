@@ -22,15 +22,28 @@
     "node-sass": "4.13.1",
     "react-transition-group": "4.3.0",
     "react-typist": "2.0.5",
-    "react-scroll": "1.7.16",
     "react-responsive-carousel": "3.1.51",
     "@fortawesome/fontawesome-svg-core": "1.2.27",
     "@fortawesome/free-solid-svg-icons": "5.12.1",
     "@fortawesome/react-fontawesome": "0.1.8",
-    "tailwindcss": "1.2.0"
+    "tailwindcss": "1.2.0",
+    "lodash": "4.17.15",
+    "eslint-plugin-react-hooks": "2.5.0"
   },
   "devDependencies": {
     "prettier": "1.19.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "license": "proprietary",
   "scripts": {

@@ -1,0 +1,56 @@
+.intro-container {
+  will-change: bottom;
+  z-index: 2;
+}
+
+.intro-content {
+  max-width: 950px;
+}
+
+.next-slide-indicator-icon {
+  margin-top: -5px;
+}
+
+.next-slide-indicator-label {
+  letter-spacing: 2px;
+}
+
+/* Animations */
+
+.header-secondary-enter,
+.header-content-enter {
+  opacity: 0;
+}
+
+.header-main-enter {
+  position: relative;
+  bottom: 0;
+}
+.header-main-enter-active,
+.header-main-enter-done {
+  position: relative;
+  bottom: 2.5rem;
+  transition: bottom 0.5s 0.2s ease-in-out;
+}
+
+.header-secondary-enter-active,
+.header-secondary-enter-done {
+  opacity: 1;
+  transition: opacity 0.5s 0.3s;
+}
+.header-content-enter-active,
+.header-content-enter-done {
+  opacity: 0.5;
+  transition: opacity 1s 0.8s;
+}
+
+.next-slide-indicator-enter {
+  opacity: 0;
+  margin-bottom: 0;
+}
+.next-slide-indicator-enter-active,
+.next-slide-indicator-enter-done {
+  opacity: 1;
+  margin-bottom: 30px;
+  transition: opacity 0.5s 2s, margin-bottom 0.75s 2s ease-out;
+}

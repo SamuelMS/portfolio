@@ -12,11 +12,7 @@ body {
   text-shadow: 1px 1px 5px black;
 }
 
-.intro-background {
-  z-index: 0;
-}
-
-.intro-background::before {
+.portfolio-background::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -28,7 +24,7 @@ body {
   filter: blur(12px);
 }
 
-.intro-background::after {
+.portfolio-background::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -38,65 +34,25 @@ body {
   background-color: rgba(24, 30, 35, 0.5);
 }
 
-.intro-container {
-  z-index: 2;
-}
-
-.intro-content {
-  max-width: 950px;
-}
-
-.next-slide-indicator-icon {
-  margin-top: -5px;
-}
-
-.next-slide-indicator-label {
-  letter-spacing: 2px;
-}
-
 /* Animations */
-
-.portfolio-appear,
-.header-secondary-enter,
-.header-content-enter {
+.portfolio-background-enter,
+.portfolio-background-exit-done {
   opacity: 0;
 }
-.portfolio-appear-active {
+
+.portfolio-background-enter-active,
+.portfolio-background-enter-done {
   opacity: 1;
-  transition: opacity 1s 0.5s;
+  transition: opacity 1s 0.25s;
 }
 
-.header-main-enter {
-  position: relative;
-  bottom: 0;
-}
-.header-main-enter-active,
-.header-main-enter-done {
-  position: relative;
-  bottom: 2.5rem;
-  transition: bottom 0.5s 0.2s ease-in-out;
-}
-
-.header-secondary-enter-active,
-.header-secondary-enter-done {
+.portfolio-background-exit {
   opacity: 1;
-  transition: opacity 0.5s 0.3s;
-}
-.header-content-enter-active,
-.header-content-enter-done {
-  opacity: 0.5;
-  transition: opacity 1s 0.8s;
 }
 
-.next-slide-indicator-enter {
+.portfolio-background-exit-active {
   opacity: 0;
-  margin-bottom: 0;
-}
-.next-slide-indicator-enter-active,
-.next-slide-indicator-enter-done {
-  opacity: 1;
-  margin-bottom: 30px;
-  transition: opacity 0.5s 2s, margin-bottom 0.75s 2s ease-out;
+  transition: opacity 0.55s;
 }
 
 /* Overrides */
@@ -105,4 +61,8 @@ body {
 .slider-wrapper,
 .slide {
   height: 100%;
+}
+
+.carousel.carousel-slider .slide {
+  background: transparent;
 }
