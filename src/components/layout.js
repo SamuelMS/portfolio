@@ -21,37 +21,39 @@ const Layout = () => {
 
     return (
         <>
-            <div className="portfolio-container no-user-select">
-                <Carousel className="full-size" axis="vertical" showThumbs={false} showArrows={false} showIndicators={false} useKeyboardArrows={true} showStatus={false}>
-                    <div className="full-size">
+            <div className="portfolio-container select-none">
+                <Carousel className="w-full h-full" axis="vertical" showThumbs={false} showArrows={false} showIndicators={false} useKeyboardArrows={true} showStatus={false}>
+                    <div className="w-full h-full">
                         <CSSTransition classNames="portfolio" in={fadeIn} appear={true} timeout={1500}>
-                            <div className="full-size position-relative">
-                                <div className="full-size intro-background position-absolute position-left position-top" />
-                                <div className="row no-margins center-xs middle-xs full-size intro-container position-relative">
-                                    <div className="position-relative intro-content">
-                                        <div className="position-absolute position-left position-top">
-                                            <CSSTransition classNames="header-main" in={shiftHeaders} timeout={700}>
-                                                <Typist startDelay={1200} avgTypingDelay={30} stdTypingDelay={5} cursor={{ show: false }} onTypingDone={() => setShiftHeaders(true)}>
-                                                    <h1 className="no-margins text-size-2 text-color-accent text-align-left portfolio-text-shadow">SOFTWARE ARCHITECT AND PRODUCT OWNER</h1>
-                                                </Typist>
-                                            </CSSTransition>
+                            <div className="w-full h-full relative">
+                                <div className="w-full h-full intro-background absolute left-0 top-0" />
+                                <div className="row m-0 center-xs middle-xs w-full h-full intro-container relative">
+                                    <div className="relative intro-content">
+                                        <div className="row w-full p-0 center-xs absolute left-0 top-0">
+                                            <div>
+                                                <CSSTransition classNames="header-main" in={shiftHeaders} timeout={700}>
+                                                    <Typist startDelay={1200} avgTypingDelay={30} stdTypingDelay={5} cursor={{ show: false }} onTypingDone={() => setShiftHeaders(true)}>
+                                                        <h1 className="text-4xl text-left font-semibold text-color-accent portfolio-text-shadow">SOFTWARE ARCHITECT AND PRODUCT OWNER</h1>
+                                                    </Typist>
+                                                </CSSTransition>
+                                                <h1 className="text-4xl font-semibold text-color-accent opacity-0">SOFTWARE ARCHITECT AND PRODUCT OWNER</h1>
+                                            </div>
                                         </div>
-                                        <h1 className="no-margins text-size-2 text-color-accent no-height hidden">SOFTWARE ARCHITECT AND PRODUCT OWNER</h1>
                                         <CSSTransition classNames="header-secondary" in={shiftHeaders} timeout={800}>
-                                            <h2 className="no-margins text-color-light top-spacer-small portfolio-text-shadow header-secondary-enter">FOCUSED ON HIGH-POWER STARTUPS AND MASSIVE ENTERPRISE</h2>
+                                            <h2 className="text-2xl font-semibold text-color-light mt-4 portfolio-text-shadow header-secondary-enter">FOCUSED ON HIGH-POWER STARTUPS AND MASSIVE ENTERPRISE</h2>
                                         </CSSTransition>
                                         <CSSTransition classNames="header-content" in={shiftHeaders} timeout={1800}>
-                                            <p className="text-color-light text-weight-bold top-spacer-large portfolio-text-shadow header-content-enter">I love figuring out how to build software products. Put me in a room with stakeholders, SMEs, and your best people – and I'll roadmap out a strategy to get you from where you are now to where you need to be.</p>
+                                            <p className="text-color-light font-semibold m-8 portfolio-text-shadow header-content-enter">I love figuring out how to build software products. Put me in a room with stakeholders, SMEs, and your best people – and I'll roadmap out a strategy to get you from where you are now to where you need to be.</p>
                                         </CSSTransition>
                                     </div>
                                 </div>
-                                <div className="row no-margins center-xs bottom-xs full-size position-absolute position-bottom position-left">
+                                <div className="row m-0 center-xs bottom-xs w-full h-full absolute bottom-0 left-0">
                                     <CSSTransition classNames="next-slide-indicator" in={shiftHeaders} timeout={2750}>
                                         <div className="text-color-accent next-slide-indicator-enter">
-                                            <div className="row no-margins center-xs">
-                                                <small className="text-color-accent text-weight-bold next-slide-indicator-label portfolio-text-shadow">WHO AM I?</small>
+                                            <div className="row m-0 center-xs">
+                                                <small className="text-color-accent font-semibold next-slide-indicator-label portfolio-text-shadow">WHO AM I?</small>
                                             </div>
-                                            <div className="row no-margins center-xs">
+                                            <div className="row m-0 center-xs">
                                                 <FontAwesomeIcon className="next-slide-indicator-icon" icon="caret-down" size="2x" fixedWidth />
                                             </div>
                                         </div>
@@ -60,9 +62,9 @@ const Layout = () => {
                             </div>
                         </CSSTransition>
                     </div>
-                    <div className="full-size"></div>
-                    <div className="full-size"></div>
-                    <div className="full-size"></div>
+                    <div className="w-full h-full"></div>
+                    <div className="w-full h-full"></div>
+                    <div className="w-full h-full"></div>
                 </Carousel>
             </div>
         </>

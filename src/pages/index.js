@@ -1,11 +1,11 @@
 import React from 'react';
 
-import 'normalize.css/normalize.css';
 import 'flexboxgrid2/flexboxgrid2.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'tailwindcss/dist/tailwind.min.css';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import '../components/fonts.scss';
 
